@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import ContextApp from './ContextApp';
-
 export default function ContextProvider({ children }) {
 
   return (
