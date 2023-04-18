@@ -83,3 +83,15 @@ export const customersMock = [
     },
   },
 ];
+
+export const customers = {
+  name: '',
+  cpf: '',
+  phone: '',
+  car: {
+    color: '',
+    model: '',
+    plate: '',
+    year: '',
+  },
+};

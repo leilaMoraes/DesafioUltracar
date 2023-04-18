@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import bcrypt from 'bcryptjs';
-import { employeesMock } from '../mocks';
+import { customers, employeesMock } from '../mocks';
 import AppContext from './AppContext';
 
 export default function AppProvider({ children }) {
@@ -9,6 +9,7 @@ export default function AppProvider({ children }) {
   const [selectedEmployee, setSelectedEmployee] = useState('André Almeida');
   const [compare, setCompare] = useState(true);
   const [begin, setBegin] = useState('');
+  const [customer, setCustomer] = useState(customers);
 
   useEffect(() => {
     setEmployees(employeesMock);
@@ -44,6 +45,8 @@ export default function AppProvider({ children }) {
     compare,
     setBegin,
     begin,
+    customer,
+    setCustomer,
   }), [
     selectEmployee,
     setSelectedEmployee,
@@ -52,6 +55,8 @@ export default function AppProvider({ children }) {
     compare,
     setBegin,
     begin,
+    customer,
+    setCustomer,
   ]);
 
   return (
