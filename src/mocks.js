@@ -1,24 +1,24 @@
 export const employees = [
   {
     nome: 'Andre Almeida',
-    senha: 'Aa1234'
+    senha: '$2a$10$qVN6VKR2jZJtE7utiFxkj.aJMztrsFeVHfESj57gg0Tjlz8hmmxgi',
   },
   {
     nome: 'Carolina Nunes',
-    senha: 'Cn5678'
+    senha: '$2a$10$Qfv1u22aUp05Uamzz/qPBub9mThYbMIYT/UycXbnjichMuV/HE.Q.',
   },
   {
     nome: 'Gabriel Lima',
-    senha: 'Gl9012'
+    senha: '$2a$10$sI0htIVdgo0lOuijCDu7Bu7j49tvJ4tHMAugZPplwHIlPWU6d1tzG',
   },
   {
     nome: 'Larissa Ferreira',
-    senha: 'Lf3456'
+    senha: '$2a$10$XO1DudvOKVU7FpRaSkkPHOtLBsIOwDHnHFd8VHpfF5jRUEPk0q8Oi',
   },
   {
     nome: 'Marcos Santana',
-    senha: 'Ms7890'
-  }
+    senha: '$2a$10$MOsDAuOF06Lam2drq.3Y0upZRQz.Gyp0R9mHA1q3kmYAcdJpE.GCC',
+  },
 ];
 
 export const customers = [
@@ -30,8 +30,8 @@ export const customers = [
       cor: 'azul',
       modelo: 'Fiat Uno',
       placa: 'ABC-1234',
-      ano: 2010
-    }
+      ano: 2010,
+    },
   },
   {
     nome: 'Maria Barros',
@@ -41,8 +41,8 @@ export const customers = [
       cor: 'vermelho',
       modelo: 'Volkswagen Gol',
       placa: 'DEF-5678',
-      ano: 2015
-    }
+      ano: 2015,
+    },
   },
   {
     nome: 'Pedro Carneiro',
@@ -52,8 +52,8 @@ export const customers = [
       cor: 'preto',
       modelo: 'Ford Ka',
       placa: 'GHI9Z12',
-      ano: 2020
-    }
+      ano: 2020,
+    },
   },
   {
     nome: 'Ana Duarte',
@@ -63,8 +63,8 @@ export const customers = [
       cor: 'branco',
       modelo: 'Chevrolet Onix',
       placa: 'JKL-3456',
-      ano: 2018
-    }
+      ano: 2018,
+    },
   },
   {
     nome: 'Lucas Esperança',
@@ -74,7 +74,7 @@ export const customers = [
       cor: 'prata',
       modelo: 'Renault Sandero',
       placa: 'MNO7H90',
-      ano: 2021
-    }
-  }
+      ano: 2021,
+    },
+  },
 ];
