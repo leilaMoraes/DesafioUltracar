@@ -1,3 +1,5 @@
+// senhas reais, ordem respectiva dos employees: Aa1234, Cn5678, Gl9012, Lf3456, Ms7890
+
 export const employeesMock = [
   {
     name: 'André Almeida',
