@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+// eslint-disable-next-line
 import bcrypt from 'bcryptjs';
 import { employees } from '../mocks';
 import AppContext from './AppContext';
@@ -8,6 +9,7 @@ export default function AppProvider({ children }) {
   const [selectEmployee, setEmployees] = useState([]);
   const [selectedEmployee, setSelectedEmployee] = useState('Andre Almeida');
   const [compare, setCompare] = useState(true);
+  const [begin, setBegin] = useState('');
 
   useEffect(() => {
     setEmployees(employees);
@@ -38,12 +40,16 @@ export default function AppProvider({ children }) {
     selectedEmployee,
     onChange,
     compare,
+    setBegin,
+    begin,
   }), [
     selectEmployee,
     setSelectedEmployee,
     selectedEmployee,
     onChange,
     compare,
+    setBegin,
+    begin,
   ]);
 
   return (

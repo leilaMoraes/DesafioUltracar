@@ -1,6 +1,6 @@
 export const employees = [
   {
-    nome: 'Andre Almeida',
+    nome: 'André Almeida',
     senha: '$2a$10$qVN6VKR2jZJtE7utiFxkj.aJMztrsFeVHfESj57gg0Tjlz8hmmxgi',
   },
   {
