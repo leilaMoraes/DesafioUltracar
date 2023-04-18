@@ -59,8 +59,8 @@ function NewService() {
         <p>{`Cor do carro: ${customer.car.color}`}</p>
         <p>{`Placa do carro: ${customer.car.plate}`}</p>
       </Space>
-      <Space direction="vertical" style={ { width: '50vh' } }>
-        <Space style={ { height: '50vh' } }>
+      <Space direction="vertical">
+        <Space>
           {showSearch ? (
             <Space>
               <Input
@@ -84,14 +84,16 @@ function NewService() {
               >
                 Inserir
               </Button>
-              {doneServices
-                ? (
-                  doneServices.map((job, i) => (
-                    <p key={ i }>
-                      {`Serviço: ${job.service} - Valor: ${job.value}`}
-                    </p>))) : null}
             </Space>
           ) : null}
+        </Space>
+        <Space direction="vertical">
+          {doneServices
+            ? (
+              doneServices.map((job, i) => (
+                <p key={ i }>
+                  {`Serviço: ${job.service} - Valor: ${job.value}`}
+                </p>))) : null}
         </Space>
         <Space>
           <Button
