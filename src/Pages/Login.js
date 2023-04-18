@@ -14,12 +14,11 @@ function Login() {
   return (
     <div>
       <Select
-        name="employees"
         value={ selectedEmployee }
         onChange={ onChange }
       >
         { selectEmployee.map((e, i) => (
-          <Select.Option key={ i }>{ e.nome }</Select.Option>
+          <Select.Option key={ i }>{ e.name }</Select.Option>
         ))}
       </Select>
       <Password

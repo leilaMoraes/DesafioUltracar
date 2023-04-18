@@ -1,36 +1,38 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-// eslint-disable-next-line
 import bcrypt from 'bcryptjs';
-import { employees } from '../mocks';
+import { employeesMock } from '../mocks';
 import AppContext from './AppContext';
 
 export default function AppProvider({ children }) {
   const [selectEmployee, setEmployees] = useState([]);
-  const [selectedEmployee, setSelectedEmployee] = useState('Andre Almeida');
+  const [selectedEmployee, setSelectedEmployee] = useState('André Almeida');
   const [compare, setCompare] = useState(true);
   const [begin, setBegin] = useState('');
 
   useEffect(() => {
-    setEmployees(employees);
-  }, [setSelectedEmployee]);
+    setEmployees(employeesMock);
+  }, [setEmployees]);
 
   const validatePassword = (dbPassword, password) => {
     const magicNumber = 6;
+    if (password.length < magicNumber) {
+      setCompare(true);
+    }
     if (password.length === magicNumber) {
       const boolean = bcrypt.compareSync(password, dbPassword);
       if (boolean === false) {
-        return global.alert('Sua senha está errada');
+        return global.alert('Senha Incorreta');
       } setCompare(!boolean);
     }
   };
 
-  const onChange = useCallback(({ target }) => {
-    if (target.name === 'employees') return setSelectedEmployee(target.value);
+  const onChange = useCallback(({ target }, value) => {
+    if (value) return setSelectedEmployee(value.children);
     if (target.name === 'password' && selectedEmployee !== '') {
-      const worker = employees.find((employee) => employee.nome === selectedEmployee);
+      const worker = employeesMock.find((employee) => employee.name === selectedEmployee);
       const password = target.value;
-      validatePassword(worker.senha, password);
+      validatePassword(worker.password, password);
     }
   }, [selectedEmployee]);
 
