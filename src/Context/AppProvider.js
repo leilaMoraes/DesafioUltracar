@@ -8,7 +8,6 @@ export default function AppProvider({ children }) {
   const [selectEmployee, setEmployees] = useState([]);
   const [selectedEmployee, setSelectedEmployee] = useState('André Almeida');
   const [compare, setCompare] = useState(true);
-  const [begin, setBegin] = useState('');
   const [customer, setCustomer] = useState(customers);
 
   useEffect(() => {
@@ -43,8 +42,6 @@ export default function AppProvider({ children }) {
     selectedEmployee,
     onChange,
     compare,
-    setBegin,
-    begin,
     customer,
     setCustomer,
   }), [
@@ -53,8 +50,6 @@ export default function AppProvider({ children }) {
     selectedEmployee,
     onChange,
     compare,
-    setBegin,
-    begin,
     customer,
     setCustomer,
   ]);
